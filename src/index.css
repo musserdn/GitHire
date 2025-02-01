@@ -103,6 +103,7 @@ tbody tr:nth-child(odd) {
 .nav-item {
   padding: 0 0.5rem;
   list-style: none;
+  
 }
 
 .nav-link {
