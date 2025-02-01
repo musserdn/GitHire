@@ -43,7 +43,7 @@ const SavedCandidates = () => {
               <tr key={candidate.id || index}>
                 <td>
                   <a href={candidate.html_url} target="_blank" rel="noopener noreferrer">
-                    <img 
+                    <img
                       src={candidate.avatar_url}
                       alt={candidate.login}
                     />
@@ -60,8 +60,7 @@ const SavedCandidates = () => {
                 <td>{candidate.bio}</td>
                 <td>
                   <FaMinusCircle
-                    color="red"
-                    style={{ cursor: "pointer", fontSize: "4rem" }}
+                    className="redButton"
                     onClick={() => handleReject(candidate.login)}
                   />
                 </td>

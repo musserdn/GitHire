@@ -18,22 +18,22 @@ const CandidateSearch = () => {
           users.map(async (user: { login: string; id: number; avatar_url: string }) => {
             const extra = await searchGithubUser(user.login);
             const {
-              name = 'No Name', 
-              location = 'No Location', 
-              email = 'No email', 
-              company = 'No Company', 
-              html_url,
-              bio = 'No Bio'
-            } = extra;
-            return {
-              login: user.login,
-              avatar_url: user.avatar_url,
               name,
               location,
               email,
               company,
               html_url,
               bio
+            } = extra;
+            return {
+              login: user.login,
+              avatar_url: user.avatar_url,
+              name: name || 'No Name',
+              location: location || 'No Location',
+              email: email || 'No Email',
+              company: company || 'No Company',
+              html_url,
+              bio: bio || 'No Bio'
             } as CandidateDetails;
           })
         );
@@ -68,22 +68,22 @@ const CandidateSearch = () => {
       users.map(async (user: { login: string; id: number; avatar_url: string }) => {
         const extra = await searchGithubUser(user.login);
         const {
-          name = '', 
-          location = '', 
-          email = '', 
-          company = '', 
-          html_url,
-          bio = ''
-        } = extra;
-        return {
-          login: user.login,
-          avatar_url: user.avatar_url,
           name,
           location,
           email,
           company,
           html_url,
           bio
+        } = extra;
+        return {
+          login: user.login,
+          avatar_url: user.avatar_url,
+          name: name || 'No Name',
+          location: location || 'No Location',
+          email: email || 'No Email',
+          company: company || 'No Company',
+          html_url,
+          bio: bio || 'No Bio'
         } as CandidateDetails;
       })
     );

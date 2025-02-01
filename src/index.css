@@ -101,9 +101,17 @@ tbody tr:nth-child(odd) {
 }
 
 tr img {
-  width: 50px;
-  height: 50px;
+  width: 100%;
+  max-width: 10rem;
+  height: auto;
   border-radius: 10px;
+  display: block;
+  margin: auto;
+}
+
+td, th {
+  text-align: center;
+  vertical-align: middle;
 }
 
 .nav-item {
@@ -121,7 +129,7 @@ tr img {
   font-weight: 700;
 }
 
-.table {
+table {
   width: 80vw;
   table-layout: fixed;
 }
@@ -164,3 +172,16 @@ tr img {
   width: 100%;
 }
 
+.redButton
+{
+  color: red;
+  cursor: pointer;
+  font-size: clamp(2rem, 5vw, 4rem);
+}
+
+.greenButton
+{
+  color: green;
+  cursor: pointer;
+  font-size: clamp(2rem, 5vw, 4rem);
+}

@@ -20,8 +20,8 @@ const CandidateCard: React.FC<CandidateCardProps> = ({ candidate, onAdd, onIgnor
             <p>Company: {candidate.company}</p>
             <p>Bio: {candidate.bio}</p>
             <div className="candidate-actions">
-                <FaMinusCircle className="button" onClick={onIgnore} color="red" style={{ cursor: "pointer", fontSize: "4rem" }} />
-                <FaPlusCircle className="button" onClick={onAdd} color="green" style={{ cursor: "pointer", fontSize: "4rem" }} />
+                <FaMinusCircle className="redButton" onClick={onIgnore} />
+                <FaPlusCircle className="greenButton" onClick={onAdd}  />
             </div>
         </div>
     );
